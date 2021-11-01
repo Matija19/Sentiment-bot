@@ -31,7 +31,6 @@ discord_key = ''
 
 # Filenames for saving tweets and tweet sentiment
 tweets_file = 'scrapped_tweets.csv'
-# For sentiment file initialize the csv file by adding header, e.g. Datetime,Sentiment
 sentiment_file = 'sentiment_at_datetime.csv'
 plot_name = 'Sentiment_at_datetime.png'
 

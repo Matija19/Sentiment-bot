@@ -85,8 +85,13 @@ def scrape(words, numtweet, api, tweets_file, sentiment_file):
     db.to_csv(filename)
     
     #print(f'\n{ith_tweet[9]},{final_sentiment}')
-    filename = sentiment_file
-    with open (filename, 'a') as fd:
+    # Initializing csv file
+    try:
+        open(sentiment_file)
+    except:
+        with open(sentiment_file, 'w') as csv_file:
+            csv_file.write('Datetime,Sentiment')
+    with open (sentiment_file, 'a') as fd:
         fd.write(f'\n{ith_tweet[9]},{final_sentiment}')
     return ith_tweet[9], final_sentiment    
 
